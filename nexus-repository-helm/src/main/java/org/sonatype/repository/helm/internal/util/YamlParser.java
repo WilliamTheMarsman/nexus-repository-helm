@@ -69,7 +69,7 @@ public class YamlParser
     try {
       Yaml yaml = new Yaml(new Constructor(), new Representer(),
           new DumperOptions(), new Resolver());
-      map = (Map<String, Object>) yaml.load(data);
+      map = yaml.load(data);
     }
     catch (YAMLException e) {
       map = (Map<String, Object>) mapper.readValue(data, Map.class);
@@ -107,7 +107,7 @@ public class YamlParser
     class TimeStampConstruct extends Constructor.ConstructScalar {
       @Override
       public Object construct(Node nnode) {
-        if (nnode.getTag().equals("tag:yaml.org,2002:timestamp")) {
+        if (nnode.getTag().toString().equals("tag:yaml.org,2002:timestamp")) {
           Construct dateConstructor = yamlConstructors.get(Tag.TIMESTAMP);
           Date date = (Date) dateConstructor.construct(nnode);
           return new DateTime(date, DateTimeZone.UTC);
