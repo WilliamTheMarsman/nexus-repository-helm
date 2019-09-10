@@ -200,7 +200,7 @@ Have fun creating and using this plugin and the Nexus platform, we are glad to h
 
 ## Getting help
 
-Looking to contribute to our code but need some help? There's a few ways to get information:
+Looking to contribute to our code but need some help? There are a few ways to get information:
 
 * Chat with us on [Gitter](https://gitter.im/sonatype/nexus-developers)
 * Check out the [Nexus3](http://stackoverflow.com/questions/tagged/nexus3) tag on Stack Overflow
